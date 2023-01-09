@@ -34,7 +34,7 @@ It should be noted that this dataset does not distinguish between Type-1 and Typ
 
 * **Exploring the data**: sizing up the data, planning what needs to be done
 * **Cleaning/Preprocesing the data**: No cleaning needed, so we made a representative subset of the subset, and checked for multicolinearity/correlation. Then I picked some variables to look at and examined how they compared in people with and without diabetes. 
-* **Data Prep/Feature Engineering**: Firstly, I ohe-ed the variables that weren't already in the binary format, and combined it with those already in 1/0 format. Then, I assigned the target variable to Y and the rest to X, and split the data into my test and training sets. 
+* **Data Prep/Feature Engineering**: Firstly, I ohe-ed the variables that weren't already in the binary format, and combined it with those already in 1/0 format. Then, I assigned the target variable to Y and the rest to X, and split the data into my test and training sets and scaled the data. 
 * **Models**: I tried out a few different models (Logistic Regression*, Random Forrest Model*, XG Boost*, and LogitBoost), adding in analysis for each one and trying out different ways to improve their results.
 * **Final Model Selection**: Review the model I selected and explain why I chose it. 
 * **Business Recommendations** - Implimentation and greater uses. 
@@ -51,37 +51,42 @@ The top factors that correlated with having diabetes were (poor) general health,
 ### Age vs. Diabetes Status
 Here we can plainly see a gradual incline of the prevelence of diabetes as patients get older. There ia slight decline at the end, which might be explained by the lower life expectancy of those with diabetes (77 for men, 81 for women).
 
-<img src="images/Age_Diabetes" alt="Age versus Diabetes" />
+<img src="images/Age_Diabetes.png" alt="Age versus Diabetes" />
 
 ### High Blood Pressure and Age vs. Diabetes Status
-Overall, those with diabetes have about **99% higher prevelence** of high blood pressure than those that do not.
+Overall, those with diabetes have about **99% higher prevelence** of high blood pressure than those that do not (0.375488 vs. 0.750467).
 
-<img src="images/HighBP_Diabetes" alt="High Blood Pressure and Age versus Diabetes Status" />
+<img src="images/HighBP_Diabetes.png" alt="High Blood Pressure and Age versus Diabetes Status" />
 
 ### High Cholesterol and Age vs. Diabetes Status¶
-Overall, the prevelence of high cholesterol was **75% higher**  in those with diabetes than those without.
+Overall, the prevelence of high cholesterol was **75% higher**  in those with diabetes than those without (0.380184 vs 0.668704).
 
-<img src="images/HighChol_Diabetes" alt="High Cholesterol versus Diabetes" />
+<img src="images/HighChol_Diabetes.png" alt="High Cholesterol versus Diabetes" />
 
 
 ### Poor Mental Health and Age vs. Diabetes Status¶
-Poor mental health is something that may not be as highly correlated as other factors, but it a factor I think should be investigated more and taken into consideration when treating patients. Those with diabetes reported roughly **45% more** poor mental health days than those without diabetes.
+Poor mental health is something that may not be as highly correlated as other factors, but it a factor I think should be investigated more and taken into consideration when treating patients. Those with diabetes reported roughly **45% more** poor mental health days than those without diabetes (3.005885 vs. 4.429978).
 
-<img src="images/MentHlth_Diabetes" alt="Poor Mental Health versus Diabetes" />
+<img src="images/MentHlth_Diabetes.png" alt="Poor Mental Health versus Diabetes" />
+
+### Sex vs. Diabetes Status
+Overall, women are about **10% more likely** to have diabetes than men (0.476676 vs 0.527761). 
+
+<img src="images/Sex_Diabetes.png" alt="Sex versus Diabetes" />
 
 **Basic Use Function**
 When receiving a new patient or even reviewing updated information for a current patient, doctors and nurses would be able to input the basic data points needed for the model to see if a patient might have diabetes (diagnosed or not). This can be implimented into their workflow via an add-on to software they currently use, or as a standalone application.
 
 **Recommendation**
 
-You will want to keep an eye out for **poor general health, high blood pressure, high cholesterol, elevated BMI, and difficulty walking, especially in older patients**.
+You will want to keep an eye out for **high blood pressure, high cholesterol, poor general health, elevated BMI, and difficulty walking, especially in older and female patients.**
 
 While this model can be useful for inputting data on new and existing patients, it shows that the most influental parameters could be examined to utilize in an action plan to improve the patients health.
 
 For example, while someone cannot make themselves younger or erase a stroke from their medical history, they could work to:
-
-* get their BMI to a healthy level
 * lower their blood pressure
+* lower their cholesterol
+* get their BMI to a healthy level
 * take steps to improve their general physical health
 * refer to mental health services such as counseling, therapy, etc. as needed
 
