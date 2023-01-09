@@ -43,7 +43,7 @@ It should be noted that this dataset does not distinguish between Type-1 and Typ
 
 Note:
 
- ***"*"***= Model was optimized with GridSearchCV after baseline established
+ "*"= Model was optimized with GridSearchCV after baseline established
 
 ## Findings <a id='findings'></a>
 
@@ -66,7 +66,7 @@ Overall, the prevelence of high cholesterol was **75% higher**  in those with di
 
 
 ### Poor Mental Health and Age vs. Diabetes Status¶
-Poor mental health is something that may not be as highly correlated as other factors, but it a factor I think should be investigated more and taken into consideration when treating patients. Those with diabetes reported roughly **45% more** poor mental health days than those without diabetes (3.005885 vs. 4.429978).
+Poor mental health is something that may not be as highly correlated as other factors, but it a factor I think should be investigated more and taken into consideration when treating patients. Those with diabetes reported roughly **47% more poor mental health days than those without diabetes** (3.005885 vs. 4.429978).
 
 <img src="images/MentHlth_Diabetes.png" alt="Poor Mental Health versus Diabetes" />
 
