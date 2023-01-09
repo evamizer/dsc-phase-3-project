@@ -6,8 +6,9 @@ In this project description, we will cover:
 
 * [***Project Overview:***](#project-overview) The project goal, audience, and dataset
 * [***Basic Walkthru:***](#basic-walkthru) The basics of what I did during the project
-* [***Findings/Business Recommendations:***](#findings-rec) Important features and recommendations based on those
-* [***Beyond:***](#beyond) What I'd like to do to improve further
+* [***Findings:***](#findings) Important features and recommendations based on those
+* [***Business Recommendations:***](#busrec) Important features and recommendations based on those
+* [***What's Next:***](#next) What I'd like to do to improve further
 
 
 ## Project Overview<a id='project-overview'></a>
@@ -24,7 +25,7 @@ For this project, I used exploratory data analysis, data preparation, and modeli
 * Using this model, we will be able to give medical professionals a list of variables to look out for to indicate that someone might have diabetes. With that, they can not only keep a lookout for those flags, but they can also tailor medical advice by implementing plans of action for their patients within these categories.  
 
 
-### The Datasert
+### The Dataset
 
 The [data]("https://www.kaggle.com/datasets/prosperchuks/health-dataset") we are using today is from the [Behavioral Risk Factor Surveillance System (BRFSS)](https://www.kaggle.com/datasets/cdc/behavioral-risk-factor-surveillance-system"), a health-related telephone survey that is collected annually by the CDC. This dataset is a balanced subset of the original dataset of 441,455 Americans on health-related risk behaviors, chronic health conditions, and the use of preventative services from 2015, made available on Kaggle. These features are either questions directly asked of participants, or calculated variables based on individual participant responses. While the original dataset had over 330 features and over 400,000 entries, this subset has 21 feature variables and 70,692 entries. Because the subset is so large, we will be take a 10% sample of that subset for ease of use.
 
@@ -44,7 +45,7 @@ Note:
 
  ***"*"***= Model was optimized with GridSearchCV after baseline established
 
-## Findings/Business Recommendations <a id='findings'></a>
+## Findings <a id='findings'></a>
 
 The top factors that correlated with having diabetes were (poor) general health, high blood pressure, BMI, high cholestoral, Age, difficulty walking. I also found the correlation between mental health and diabetes to be compelling. Here are th
 
@@ -73,6 +74,8 @@ Poor mental health is something that may not be as highly correlated as other fa
 Overall, women are about **10% more likely** to have diabetes than men (0.476676 vs 0.527761). 
 
 <img src="images/Sex_Diabetes.png" alt="Sex versus Diabetes" />
+
+## Business Recommendations <a id='busrec'></a>
 
 **Basic Use Function**
 When receiving a new patient or even reviewing updated information for a current patient, doctors and nurses would be able to input the basic data points needed for the model to see if a patient might have diabetes (diagnosed or not). This can be implimented into their workflow via an add-on to software they currently use, or as a standalone application.
