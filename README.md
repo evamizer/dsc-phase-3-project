@@ -100,3 +100,5 @@ In addition, I would like to explore more data derived not from the patients opi
 
 On a more data-centric note, I think next time I will change the column titles after OHE-ing, as continually refering back to my legend got pretty old, pretty fast. 
 
+Thank you for taking the time to read through this, and I hope it helped inform and awaken your curiosity!
+
