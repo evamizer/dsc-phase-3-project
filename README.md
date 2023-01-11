@@ -123,9 +123,7 @@ Recall for true positives was higher than any other model (.79), being able to a
 
 ## Findings <a id='findings'></a>
 
-The top factors that correlated with having diabetes were (poor) general health, high blood pressure, BMI, high cholestoral, Age, difficulty walking. I also found the correlation between mental health and diabetes to be compelling. Here are th
-
-<img src="images/Final_model_results.png" alt="Final" />
+The top factors that correlated with having diabetes were (poor) general health, high blood pressure, BMI, high cholestoral, Age, difficulty walking. I also found the correlation between mental health and diabetes to be compelling. 
 
 ### Age vs. Diabetes Status
 Here we can plainly see a gradual incline of the prevelence of diabetes as patients get older. There ia slight decline at the end, which might be explained by the lower life expectancy of those with diabetes (77 for men, 81 for women).
